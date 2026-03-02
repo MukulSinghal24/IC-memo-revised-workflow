@@ -42,20 +42,12 @@ body { font-family: "Segoe UI", Arial, sans-serif; background: #F5F5F5; color: #
 </div>
 
 <!-- CHANGELOG -->
-<div class="chg"><h2>&#9888; Revision Log (v3)</h2>
-<ul>
-<li><strong>Loop-backs:</strong> All decision-fail loops now return to <em>start</em> of the phase/section (was mid-phase). Applies to P1, P2, P3, P4, P7, P8, P9, P10.</li>
-<li><strong>Blocker re-classification:</strong> Steps requiring proprietary database access (Capital IQ, Edgar, IBISWorld, MergerMarket) promoted Green &rarr; Yellow per INSTRUCTIONS_v1 &ldquo;Soft Blocker&rdquo; definition. Affects 1.8, 3.1, 3.4, 3.9, 9.1, 9.3, 9.10.</li>
-<li><strong>Phase 5 Red &rarr; Yellow:</strong> Steps 5.1 (&ldquo;Distill highlights&rdquo;) and 5.7 (&ldquo;Define kill criteria&rdquo;) changed to Yellow &mdash; LLM can draft, human validates. Phase 5 now 2G/3Y/3R (was 2G/1Y/5R).</li>
-<li><strong>Shape corrections:</strong> &ldquo;Build / Compile / Compute&rdquo; steps changed from parallelogram to rectangle (process). Parallelograms reserved for Parse/Extract (input) and Draft/Write section (output) only.</li>
-<li><strong>Phase 4 QoE expansion:</strong> Step 4.2 renamed &ldquo;Compile LTM Financial Statements&rdquo;; old 4.3 expanded into 6 QoE sub-steps (4.3&ndash;4.8) with a QoE validation gate before broader financial analysis. Phase grows 16 &rarr; 19 steps.</li>
-</ul></div>
 
 <div class="toc"><h2>Table of Contents</h2>
 <a href="#p1">Phase 1: CIM Screening &amp; Deal Parameters (12 steps | 6 I/O | 10G / 2Y / 0R)</a>
 <a href="#p2">Phase 2: Company &amp; Operations Deep Dive (14 steps | 1 I/O | 12G / 1Y / 1R)</a>
 <a href="#p3">Phase 3: Industry &amp; Market Analysis (10 steps | 1 I/O | 6G / 4Y / 0R)</a>
-<a href="#p4">Phase 4: Financial Analysis &amp; QoE (19 steps | 1 I/O | 17G / 2Y / 0R) &#9733;</a>
+<a href="#p4">Phase 4: Financial Analysis &amp; QoE (19 steps | 1 I/O | 17G / 2Y / 0R)</a>
 <a href="#p5">Phase 5: Investment Thesis Development (8 steps | 1 I/O | 2G / 3Y / 3R)</a>
 <a href="#p6">Phase 6: Due Diligence Synthesis (14 steps | 7 I/O | 12G / 1Y / 1R)</a>
 <a href="#p7">Phase 7: Deal Structure &amp; Terms (16 steps | 1 I/O | 10G / 1Y / 5R)</a>
@@ -103,7 +95,6 @@ flowchart TB
     style Dec1 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
     style Action1 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: CIM data consistent across sources? | Loop: restart Phase 1 | 1.8 Yellow: needs industry benchmark DB</div>
 </div>
 
 <!-- ==================== PHASE 2 ==================== -->
@@ -149,7 +140,6 @@ flowchart TB
     style Dec2 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style Action2 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: Management rollover acceptable? | Loop: restart Phase 2 | 2.1 shape corrected to rectangle (process)</div>
 </div>
 
 <!-- ==================== PHASE 3 ==================== -->
@@ -187,12 +177,11 @@ flowchart TB
     style Dec3 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
     style Action3 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: Competitive moat sufficient? | Loop: restart Phase 3 | 3.1, 3.4, 3.9 Yellow: need market research / competitor DBs</div>
 </div>
 
 <!-- ==================== PHASE 4 — ★ QoE EXPANDED ==================== -->
-<div class="ph" id="p4" style="border:2px solid #E65100;">
-<div class="phh" style="background:#BF360C;">Phase 4: Financial Analysis &amp; QoE<span>19 Steps | 1 I/O | 17G &bull; 2Y &bull; 0R &nbsp;&#9733; REVISED</span></div>
+<div class="ph" id="p4">
+<div class="phh">Phase 4: Financial Analysis &amp; QoE<span>19 Steps | 1 I/O | 17G &bull; 2Y &bull; 0R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart TB
     Start4(["Begin Phase 4"])
@@ -206,9 +195,9 @@ flowchart TB
     QoE_start --> T4_3["4.3  QoE: EBITDA Reconciliation &<br/>Pro Forma Adjustments"]
     T4_3 --> T4_4["4.4  QoE: Validate Adjustment Details<br/>& Supporting Documentation"]
     T4_4 --> T4_5["4.5  QoE: Revenue Quality &<br/>Service Line Analysis"]
-    T4_5 --> T4_6["4.6  QoE: Customer Concentration<br/>& Revenue Durability"]
-    T4_6 --> T4_7["4.7  QoE: Working Capital<br/>Normalization & Target NWC"]
-    T4_7 --> T4_8["4.8  QoE: Key Risks &<br/>Considerations"]
+    T4_5 --> T4_6["4.6  QoE: Customer Concentration<br/>Top 5 = 15.2% | NRR 105%+"]
+    T4_6 --> T4_7["4.7  QoE: Working Capital<br/>NWC $2.4M target (1.4% rev)"]
+    T4_7 --> T4_8["4.8  QoE: Key Risks<br/>Leverage 5.9x | 18% tech turnover"]
     T4_8 --> DecQoE{"QoE adjusted EBITDA<br/>validated?"}
     DecQoE -->|No| ActionQoE["Revise & restart<br/>QoE workstream"]
     ActionQoE -.->|Loop back| T4_3
@@ -233,8 +222,8 @@ flowchart TB
 
     style Start4 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End4 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
-    style QoE_start fill:#FFF3E0,stroke:#E65100,color:#BF360C,stroke-width:2px
-    style QoE_end fill:#FFF3E0,stroke:#E65100,color:#BF360C,stroke-width:2px
+    style QoE_start fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style QoE_end fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T4_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
     style T4_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
     style T4_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -259,7 +248,6 @@ flowchart TB
     style ActionQoE fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style Action4 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Gates: (1) QoE EBITDA validated? → restart QoE | (2) Model reconciles? → restart 4.9 | All Build/Compile steps corrected to rectangles</div>
 </div>
 
 <!-- ==================== PHASE 5 ==================== -->
@@ -294,7 +282,6 @@ flowchart TB
     style Action5 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style Stop5 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: Kill criteria triggered? → STOP | 5.1 & 5.7 promoted to Yellow (LLM drafts, human validates) | 5.3 & 5.4 corrected to rectangles</div>
 </div>
 
 <!-- ==================== PHASE 6 ==================== -->
@@ -341,7 +328,6 @@ flowchart TB
     style Action6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style Stop6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: Unmitigated red-flag risks? → STOP | 6.1, 6.11-6.13 corrected to rectangles (process, not I/O)</div>
 </div>
 
 <!-- ==================== PHASE 7 ==================== -->
@@ -391,7 +377,6 @@ flowchart TB
     style T7_13 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style T7_14 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: HSR clearance feasible? | Loop: restart Phase 7 | All Build/Compute steps corrected to rectangles</div>
 </div>
 
 <!-- ==================== PHASE 8 ==================== -->
@@ -433,7 +418,6 @@ flowchart TB
     style T8_7 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style Action8 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: Value creation achieves target IRR? | Loop: restart Phase 8 (was 8.7) | Build steps corrected to rectangles</div>
 </div>
 
 <!-- ==================== PHASE 9 ==================== -->
@@ -479,7 +463,6 @@ flowchart TB
     style Dec9 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
     style Action9 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: Valuation supports entry multiple? | Loop: restart Phase 9 | 9.1, 9.3 Yellow: Capital IQ/Pitchbook | 9.10 Yellow: market data | All Build steps → rectangles</div>
 </div>
 
 <!-- ==================== PHASE 10 ==================== -->
@@ -498,12 +481,13 @@ flowchart TB
     T10_7 --> T10_8["10.8  Full document review: narrative consistency & traceability"]
     T10_8 --> T10_9["10.9  Senior review cycle (VP to Principal to Partner)"]
     T10_9 --> Dec10{"IC approves<br/>proceeding?"}
-    Dec10 -->|No| Action10["Revise & restart<br/>Phase 10"]
-    Action10 -.->|Loop back| T10_1
+    Dec10 -->|No| Action10["Issue DNP<br/>& kill deal"]
+    Action10 --> Stop10(["STOP"])
     Dec10 -->|Yes| T10_10[/"10.10  Prepare IC presentation materials & talking points"/]
     T10_10 --> End10(["Phase 10 Complete"])
     style Start10 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End10 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style Stop10 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style T10_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
     style T10_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
     style T10_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -517,7 +501,6 @@ flowchart TB
     style Dec10 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
     style Action10 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div>
-<div class="phm">Decision: IC approves proceeding? | Loop: restart Phase 10 | 10.3, 10.5, 10.6 corrected to rectangles</div>
 </div>
 
 <script type="module">

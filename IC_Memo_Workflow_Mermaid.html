@@ -38,14 +38,14 @@ body { font-family: "Segoe UI", Arial, sans-serif; background: #F5F5F5; color: #
 </div>
 <div class="toc"><h2>Table of Contents</h2>
 <a href="#p1">Phase 1: CIM Screening & Deal Parameters (12 steps | 6 I/O | 11G/1Y/0R)</a>
-<a href="#p2">Phase 2: Company & Operations Deep Dive (14 steps | 4 I/O | 12G/1Y/1R)</a>
+<a href="#p2">Phase 2: Company & Operations Deep Dive (14 steps | 2 I/O | 12G/1Y/1R)</a>
 <a href="#p3">Phase 3: Industry & Market Analysis (10 steps | 1 I/O | 9G/1Y/0R)</a>
-<a href="#p4">Phase 4: Financial Analysis & QoE (16 steps | 7 I/O | 15G/1Y/0R)</a>
+<a href="#p4">Phase 4: Financial Analysis & QoE (16 steps | 5 I/O | 15G/1Y/0R)</a>
 <a href="#p5">Phase 5: Investment Thesis Development (8 steps | 3 I/O | 2G/1Y/5R)</a>
 <a href="#p6">Phase 6: Due Diligence Synthesis (14 steps | 11 I/O | 12G/1Y/1R)</a>
-<a href="#p7">Phase 7: Deal Structure & Terms (16 steps | 8 I/O | 10G/1Y/5R)</a>
-<a href="#p8">Phase 8: Value Creation Planning (12 steps | 2 I/O | 8G/3Y/1R)</a>
-<a href="#p9">Phase 9: Valuation & Returns Analysis (14 steps | 10 I/O | 13G/1Y/0R)</a>
+<a href="#p7">Phase 7: Deal Structure & Terms (16 steps | 6 I/O | 10G/1Y/5R)</a>
+<a href="#p8">Phase 8: Value Creation Planning (12 steps | 4 I/O | 8G/3Y/1R)</a>
+<a href="#p9">Phase 9: Valuation & Returns Analysis (14 steps | 11 I/O | 13G/1Y/0R)</a>
 <a href="#p10">Phase 10: IC Memo Assembly & Review (10 steps | 7 I/O | 8G/0Y/2R)</a>
 </div>
 <div class="ph" id="p1">
@@ -89,16 +89,16 @@ flowchart TB
 <div class="phm">Decision: CIM data consistent across sources? | Blocker: YELLOW</div>
 </div>
 <div class="ph" id="p2">
-<div class="phh">Phase 2: Company & Operations Deep Dive<span>14 Steps | 4 I/O | 12G &bull; 1Y &bull; 1R</span></div>
+<div class="phh">Phase 2: Company & Operations Deep Dive<span>14 Steps | 2 I/O | 12G &bull; 1Y &bull; 1R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart TB
     Start2(["Begin Phase 2"])
     Start2 --> T2_1[/"2.1  Build product/service line matrix with unit economics"/]
     T2_1 --> T2_2["2.2  Analyze customer segmentation & concentration"]
-    T2_2 --> T2_3[/"2.3  Map customer contract structure & renewal profile"/]
+    T2_2 --> T2_3["2.3  Map customer contract structure & renewal profile"]
     T2_3 --> T2_4["2.4  Analyze recurring vs. non-recurring revenue mix"]
     T2_4 --> T2_5["2.5  Analyze facilities, capacity & unit economics"]
-    T2_5 --> T2_6[/"2.6  Map supply chain & key vendor dependencies"/]
+    T2_5 --> T2_6["2.6  Map supply chain & key vendor dependencies"]
     T2_6 --> T2_7["2.7  Map distribution network & channel mix"]
     T2_7 --> T2_8["2.8  Review real estate footprint & lease obligations"]
     T2_8 --> T2_9["2.9  Analyze workforce composition & labor dynamics"]
@@ -169,13 +169,13 @@ flowchart TB
 <div class="phm">Decision: Competitive moat sufficient for thesis? | Blocker: YELLOW</div>
 </div>
 <div class="ph" id="p4">
-<div class="phh">Phase 4: Financial Analysis & QoE<span>16 Steps | 7 I/O | 15G &bull; 1Y &bull; 0R</span></div>
+<div class="phh">Phase 4: Financial Analysis & QoE<span>16 Steps | 5 I/O | 15G &bull; 1Y &bull; 0R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart TB
     Start4(["Begin Phase 4"])
     Start4 --> T4_1[/"4.1  Compile historical IS, BS, CFS (3-5 yrs + LTM)"/]
     T4_1 --> T4_2[/"4.2  Construct LTM financial statements"/]
-    T4_2 --> T4_3[/"4.3  Analyze QoE report & reconcile adjusted EBITDA"/]
+    T4_2 --> T4_3["4.3  Analyze QoE report & reconcile adjusted EBITDA"]
     T4_3 --> T4_4[/"4.4  Build revenue bridge (volume, price, mix, M&A)"/]
     T4_4 --> T4_5["4.5  Analyze customer concentration & revenue durability"]
     T4_5 --> T4_6[/"4.6  Build EBITDA bridge (FY to LTM)"/]
@@ -185,7 +185,7 @@ flowchart TB
     T4_9 --> T4_10["4.10  Analyze existing debt structure & covenant compliance"]
     T4_10 --> T4_11["4.11  Capex analysis (maintenance vs. growth split)"]
     T4_11 --> T4_12["4.12  Cash flow analysis & free cash flow conversion"]
-    T4_12 --> T4_13[/"4.13  Budget vs. actual variance analysis (2-3 years)"/]
+    T4_12 --> T4_13["4.13  Budget vs. actual variance analysis (2-3 years)"]
     T4_13 --> T4_14["4.14  Review accounting policies & revenue recognition"]
     T4_14 --> T4_15["4.15  Validate financial model inputs & structure"]
     T4_15 --> Dec4{"Financial model<br/>reconciles to QoE?"}
@@ -295,7 +295,7 @@ flowchart TB
 <div class="phm">Decision: Any unmitigated red-flag risks? | Blocker: RED</div>
 </div>
 <div class="ph" id="p7">
-<div class="phh">Phase 7: Deal Structure & Terms<span>16 Steps | 8 I/O | 10G &bull; 1Y &bull; 5R</span></div>
+<div class="phh">Phase 7: Deal Structure & Terms<span>16 Steps | 6 I/O | 10G &bull; 1Y &bull; 5R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart TB
     Start7(["Begin Phase 7"])
@@ -304,10 +304,10 @@ flowchart TB
     T7_2 --> T7_3["7.3  Shareholder base & cost basis analysis"]
     T7_3 --> T7_4[/"7.4  Build change-of-control matrix"/]
     T7_4 --> T7_5[/"7.5  Build consent & regulatory approval tracker"/]
-    T7_5 --> T7_6[/"7.6  Analyze board authorization & deal process"/]
+    T7_5 --> T7_6["7.6  Analyze board authorization & deal process"]
     T7_6 --> T7_7["7.7  Review shareholder agreements & drag-along/tag-along"]
     T7_7 --> T7_8[/"7.8  Build Sources & Uses table"/]
-    T7_8 --> T7_9[/"7.9  Analyze debt financing terms & covenant structure"/]
+    T7_8 --> T7_9["7.9  Analyze debt financing terms & covenant structure"]
     T7_9 --> T7_10["7.10  280G golden parachute analysis"]
     T7_10 --> T7_11["7.11  HSR/antitrust assessment"]
     T7_11 --> Dec7{"HSR / regulatory<br/>clearance feasible?"}
@@ -343,16 +343,16 @@ flowchart TB
 <div class="phm">Decision: HSR / regulatory clearance feasible? | Blocker: RED</div>
 </div>
 <div class="ph" id="p8">
-<div class="phh">Phase 8: Value Creation Planning<span>12 Steps | 2 I/O | 8G &bull; 3Y &bull; 1R</span></div>
+<div class="phh">Phase 8: Value Creation Planning<span>12 Steps | 4 I/O | 8G &bull; 3Y &bull; 1R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart TB
     Start8(["Begin Phase 8"])
     Start8 --> T8_1["8.1  Categorize & quantify organic growth initiatives"]
     T8_1 --> T8_2["8.2  Quantify margin expansion opportunities"]
-    T8_2 --> T8_3["8.3  Build M&A strategy & pipeline valuation"]
+    T8_2 --> T8_3[/"8.3  Build M&A strategy & pipeline valuation"/]
     T8_3 --> T8_4["8.4  Estimate synergy realization costs & timing"]
     T8_4 --> T8_5["8.5  Review prior acquisition integration performance"]
-    T8_5 --> T8_6["8.6  Build Day 1 / 30-60-90 / Year 1 integration plan"]
+    T8_5 --> T8_6[/"8.6  Build Day 1 / 30-60-90 / Year 1 integration plan"/]
     T8_6 --> T8_7["8.7  People & organizational integration assessment"]
     T8_7 --> T8_8["8.8  IT systems integration assessment & roadmap"]
     T8_8 --> T8_9[/"8.9  Build value creation waterfall (entry to exit)"/]
@@ -383,7 +383,7 @@ flowchart TB
 <div class="phm">Decision: Value creation plan achieves target IRR? | Blocker: YELLOW</div>
 </div>
 <div class="ph" id="p9">
-<div class="phh">Phase 9: Valuation & Returns Analysis<span>14 Steps | 10 I/O | 13G &bull; 1Y &bull; 0R</span></div>
+<div class="phh">Phase 9: Valuation & Returns Analysis<span>14 Steps | 11 I/O | 13G &bull; 1Y &bull; 0R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart TB
     Start9(["Begin Phase 9"])
@@ -402,7 +402,7 @@ flowchart TB
     Dec9 -->|Yes| T9_10["9.10  Premium analysis (vs. unaffected / book value)"]
     T9_10 --> T9_11[/"9.11  Build sensitivity tables (entry x exit multiple)"/]
     T9_11 --> T9_12[/"9.12  Finalize Sources & Uses and pro forma balance sheet"/]
-    T9_12 --> T9_13["9.13  Build exit analysis (timing, buyer universe, routes)"]
+    T9_12 --> T9_13[/"9.13  Build exit analysis (timing, buyer universe, routes)"/]
     T9_13 --> T9_14[/"9.14  Draft Valuation & Returns section (4-6 pages)"/]
     T9_14 --> End9(["Phase 9 Complete"])
     style Start9 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1

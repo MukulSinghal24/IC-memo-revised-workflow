@@ -20,10 +20,9 @@ body { font-family: "Segoe UI", Arial, sans-serif; background: #F5F5F5; color: #
 .ph { margin:16px 30px; background:white; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.06); overflow:hidden; }
 .phh { background:#283593; color:white; padding:10px 18px; font-size:15px; font-weight:600; }
 .phh span { color:#90CAF9; font-weight:400; font-size:12px; margin-left:8px; }
-.phb { padding:16px; overflow-x:auto; }
+.phb { padding:16px; overflow-x:auto; position:relative; }
 .zoom-btn { position:absolute; top:8px; right:8px; width:32px; height:32px; background:#283593; color:white; border:none; border-radius:6px; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; opacity:0.7; transition:opacity 0.2s; z-index:10; }
 .zoom-btn:hover { opacity:1; }
-.phb { position:relative; }
 .modal-overlay { display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:1000; justify-content:center; align-items:center; cursor:zoom-out; }
 .modal-overlay.active { display:flex; }
 .modal-content { max-width:95vw; max-height:92vh; overflow:auto; background:white; border-radius:8px; padding:20px; position:relative; }
@@ -31,7 +30,7 @@ body { font-family: "Segoe UI", Arial, sans-serif; background: #F5F5F5; color: #
 .modal-close { position:fixed; top:16px; right:24px; color:white; font-size:32px; cursor:pointer; z-index:1001; background:rgba(0,0,0,0.5); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:none; }
 </style></head><body>
 <div class="hdr"><h1>IC MEMO BUILD WORKFLOW</h1>
-<p>Project Gate — Gate Doors &amp; Equipment Industries  |  $320M EV  |  10 Steps  |  129 Tasks</p></div>
+<p>Project Gate — Gate Doors &amp; Equipment Industries  |  $320M EV  |  9 Steps  |  117 Tasks</p></div>
 <div class="leg">
 <div class="li"><div class="sw sg"></div> Green — No Blocker</div>
 <div class="li"><div class="sw sy"></div> Yellow — Soft Blocker</div>
@@ -39,16 +38,15 @@ body { font-family: "Segoe UI", Arial, sans-serif; background: #F5F5F5; color: #
 </div>
 <div class="toc"><h2>Table of Contents</h2>
 <a href="#lifecycle">Deal Lifecycle Overview</a>
-<a href="#s1">Step 1: CIM Screening &amp; Deal Parameters (12 tasks | 10G / 2Y / 0R)</a>
-<a href="#s2">Step 2: Company &amp; Operations Deep Dive (14 tasks | 12G / 1Y / 1R)</a>
-<a href="#s3">Step 3: Industry &amp; Market Analysis (10 tasks | 6G / 4Y / 0R)</a>
-<a href="#s4">Step 4: Financial Analysis &amp; QoE (19 tasks | 17G / 2Y / 0R)</a>
-<a href="#s5">Step 5: Investment Thesis Development (8 tasks | 2G / 3Y / 3R)</a>
-<a href="#s6">Step 6: Due Diligence Synthesis (14 tasks | 12G / 1Y / 1R)</a>
-<a href="#s7">Step 7: Deal Structure &amp; Terms (16 tasks | 10G / 4Y / 2R)</a>
-<a href="#s8">Step 8: Value Creation Planning (12 tasks | 8G / 3Y / 1R)</a>
-<a href="#s9">Step 9: Valuation &amp; Returns Analysis (14 tasks | 10G / 4Y / 0R)</a>
-<a href="#s10">Step 10: IC Memo Assembly &amp; Review (10 tasks | 8G / 0Y / 2R)</a>
+<a href="#s1">Step 1: Company &amp; Operations Deep Dive (14 tasks | 12G / 1Y / 1R)</a>
+<a href="#s2">Step 2: Industry &amp; Market Analysis (10 tasks | 6G / 4Y / 0R)</a>
+<a href="#s3">Step 3: Financial Analysis &amp; QoE (19 tasks | 17G / 2Y / 0R)</a>
+<a href="#s4">Step 4: Investment Thesis Development (8 tasks | 2G / 3Y / 3R)</a>
+<a href="#s5">Step 5: Due Diligence Synthesis (14 tasks | 12G / 1Y / 1R)</a>
+<a href="#s6">Step 6: Deal Structure &amp; Terms (16 tasks | 10G / 4Y / 2R)</a>
+<a href="#s7">Step 7: Value Creation Planning (12 tasks | 8G / 3Y / 1R)</a>
+<a href="#s8">Step 8: Valuation &amp; Returns Analysis (14 tasks | 10G / 4Y / 0R)</a>
+<a href="#s9">Step 9: IC Memo Assembly &amp; Review (10 tasks | 8G / 0Y / 2R)</a>
 </div>
 
 <!-- DEAL LIFECYCLE -->
@@ -91,51 +89,12 @@ flowchart LR
     style CL fill:#F5F5F5,stroke:#388E3C,color:#2E7D32,stroke-width:2px
 </pre></div></div>
 
-<!-- STEP 1 -->
+<!-- STEP 1 (was Step 2) -->
 <div class="ph" id="s1">
-<div class="phh">Step 1: CIM Screening &amp; Deal Parameters<span>12 Tasks | 10G &bull; 2Y &bull; 0R</span></div>
+<div class="phh">Step 1: Company &amp; Operations Deep Dive<span>14 Tasks | 12G &bull; 1Y &bull; 1R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start1(["Begin Step 1"]) --> T1_1[/"1.1  Parse CIM for company<br/>profile & deal parameters"/]
-    T1_1 --> T1_2[/"1.2  Extract CIM financial<br/>summary & claims"/]
-    T1_2 --> T1_3["1.3  Review Management Pres<br/>& compare to CIM"]
-    T1_3 --> T1_4[/"1.4  Extract management<br/>projections & assumptions"/]
-    T1_4 --> T1_5["1.5  Map corporate &<br/>legal entity structure"]
-    T1_5 --> T1_6[/"1.6  Parse process letter<br/>& map auction dynamics"/]
-    T1_6 --> T1_7["1.7  Cross-reference KPIs<br/>against CIM claims"]
-    T1_7 --> Dec1{"CIM data consistent<br/>across sources?"}
-    Dec1 -->|No| Act1["Restart Step 1"]
-    Act1 -.-> T1_1
-    Dec1 -->|Yes| T1_8["1.8  Benchmark KPIs<br/>against industry standards"]
-    T1_8 --> T1_9["1.9  Review NDA terms &<br/>corporate formation docs"]
-    T1_9 --> T1_10["1.10  Review sell-side advisor<br/>& fairness opinion scope"]
-    T1_10 --> T1_11[/"1.11  Draft Sec 1.1<br/>Recommendation paragraph"/]
-    T1_11 --> T1_12[/"1.12  Populate Sec 1.2<br/>Transaction Summary"/]
-    T1_12 --> End1(["Step 1 Complete"])
-    style Start1 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
-    style End1 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
-    style T1_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_12 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
-    style T1_8 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
-    style T1_11 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
-    style Dec1 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
-    style Act1 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
-</pre></div></div>
-
-<!-- STEP 2 -->
-<div class="ph" id="s2">
-<div class="phh">Step 2: Company &amp; Operations Deep Dive<span>14 Tasks | 12G &bull; 1Y &bull; 1R</span></div>
-<div class="phb"><pre class="mermaid">
-flowchart LR
-    Start2(["Begin Step 2"]) --> T2_1["2.1  Build product/service<br/>line matrix"]
+    Start2(["Begin Step 1"]) --> T2_1["2.1  Build product/service<br/>line matrix"]
     T2_1 --> T2_2["2.2  Customer segmentation<br/>& concentration"]
     T2_2 --> T2_3["2.3  Map contract structure<br/>& renewal profile"]
     T2_3 --> T2_4["2.4  Recurring vs<br/>non-recurring revenue mix"]
@@ -147,12 +106,12 @@ flowchart LR
     T2_9 --> T2_10["2.10  Management team<br/>backgrounds & capabilities"]
     T2_10 --> T2_11["2.11  Mgmt rollover<br/>commitment & alignment"]
     T2_11 --> Dec2{"Company profile &<br/>operational readiness<br/>validated?"}
-    Dec2 -->|No| Act2["Restart Step 2"]
+    Dec2 -->|No| Act2["Restart Step 1"]
     Act2 -.-> T2_1
     Dec2 -->|Yes| T2_12["2.12  Technology stack<br/>& IP position"]
     T2_12 --> T2_13["2.13  Quality control &<br/>regulatory compliance"]
     T2_13 --> T2_14[/"2.14  Draft Company<br/>Overview section (4-6 pp)"/]
-    T2_14 --> End2(["Step 2 Complete"])
+    T2_14 --> End2(["Step 1 Complete"])
     style Start2 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End2 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T2_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -173,25 +132,25 @@ flowchart LR
     style Act2 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 3 -->
-<div class="ph" id="s3">
-<div class="phh">Step 3: Industry &amp; Market Analysis<span>10 Tasks | 6G &bull; 4Y &bull; 0R</span></div>
+<!-- STEP 2 (was Step 3) -->
+<div class="ph" id="s2">
+<div class="phh">Step 2: Industry &amp; Market Analysis<span>10 Tasks | 6G &bull; 4Y &bull; 0R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start3(["Begin Step 3"]) --> T3_1["3.1  Size TAM / SAM / SOM"]
+    Start3(["Begin Step 2"]) --> T3_1["3.1  Size TAM / SAM / SOM"]
     T3_1 --> T3_2["3.2  Market growth drivers<br/>& secular tailwinds"]
     T3_2 --> T3_3["3.3  Market segmentation<br/>& target dynamics"]
     T3_3 --> T3_4["3.4  Competitive landscape<br/>(5-10 competitors)"]
     T3_4 --> T3_5["3.5  Industry fragmentation<br/>& consolidation opportunity"]
     T3_5 --> T3_6["3.6  Barriers to entry<br/>& competitive moats"]
     T3_6 --> Dec3{"Competitive moat<br/>sufficient for thesis?"}
-    Dec3 -->|No| Act3["Restart Step 3"]
+    Dec3 -->|No| Act3["Restart Step 2"]
     Act3 -.-> T3_1
     Dec3 -->|Yes| T3_7["3.7  Regulatory environment<br/>& compliance landscape"]
     T3_7 --> T3_8["3.8  Consumer / end-market<br/>trend analysis"]
     T3_8 --> T3_9["3.9  Benchmark target<br/>vs peers on key metrics"]
     T3_9 --> T3_10[/"3.10  Draft Industry &<br/>Market Overview (3-5 pp)"/]
-    T3_10 --> End3(["Step 3 Complete"])
+    T3_10 --> End3(["Step 2 Complete"])
     style Start3 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End3 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T3_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -208,12 +167,12 @@ flowchart LR
     style Act3 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 4 -->
-<div class="ph" id="s4">
-<div class="phh">Step 4: Financial Analysis &amp; QoE<span>19 Tasks | 17G &bull; 2Y &bull; 0R</span></div>
+<!-- STEP 3 (was Step 4) -->
+<div class="ph" id="s3">
+<div class="phh">Step 3: Financial Analysis &amp; QoE<span>19 Tasks | 17G &bull; 2Y &bull; 0R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start4(["Begin Step 4"]) --> T4_1["4.1  Compile historical<br/>IS, BS, CFS (3-5 yrs)"]
+    Start4(["Begin Step 3"]) --> T4_1["4.1  Compile historical<br/>IS, BS, CFS (3-5 yrs)"]
     T4_1 --> T4_2["4.2  Compile LTM<br/>Financial Statements"]
     T4_2 --> QS(["QoE Workstream"])
     QS --> T4_3["4.3  QoE: EBITDA Recon &<br/>Pro Forma Adjustments"]
@@ -240,7 +199,7 @@ flowchart LR
     D4 -->|No| A4["Restart from 4.9"]
     A4 -.-> T4_9
     D4 -->|Yes| T4_19[/"4.19  Draft Financial<br/>Overview section (5-8 pp)"/]
-    T4_19 --> End4(["Step 4 Complete"])
+    T4_19 --> End4(["Step 3 Complete"])
     style Start4 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End4 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style QS fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
@@ -270,12 +229,12 @@ flowchart LR
     style A4 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 5 -->
-<div class="ph" id="s5">
-<div class="phh">Step 5: Investment Thesis Development<span>8 Tasks | 2G &bull; 3Y &bull; 3R</span></div>
+<!-- STEP 4 (was Step 5) -->
+<div class="ph" id="s4">
+<div class="phh">Step 4: Investment Thesis Development<span>8 Tasks | 2G &bull; 3Y &bull; 3R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start5(["Begin Step 5"]) --> T5_1["5.1  Distill top 3-5<br/>investment highlights"]
+    Start5(["Begin Step 4"]) --> T5_1["5.1  Distill top 3-5<br/>investment highlights"]
     T5_1 --> T5_2["5.2  Define value creation<br/>thesis with quantification"]
     T5_2 --> T5_3["5.3  Build base case<br/>operating model (5-yr)"]
     T5_3 --> T5_4["5.4  Build upside &<br/>downside scenarios"]
@@ -286,7 +245,7 @@ flowchart LR
     Dec5 -->|Yes| Act5["Issue DNP memo<br/>& exit process"]
     Act5 --> Stop5(["STOP"])
     Dec5 -->|No| T5_8[/"5.8  Draft Investment<br/>Thesis section (2-3 pp)"/]
-    T5_8 --> End5(["Step 5 Complete"])
+    T5_8 --> End5(["Step 4 Complete"])
     style Start5 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End5 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T5_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -302,12 +261,12 @@ flowchart LR
     style Stop5 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 6 -->
-<div class="ph" id="s6">
-<div class="phh">Step 6: Due Diligence Synthesis<span>14 Tasks | 12G &bull; 1Y &bull; 1R</span></div>
+<!-- STEP 5 (was Step 6) -->
+<div class="ph" id="s5">
+<div class="phh">Step 5: Due Diligence Synthesis<span>14 Tasks | 12G &bull; 1Y &bull; 1R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start6(["Begin Step 6"]) --> T6_1["6.1  Compile all DD flags<br/>from Steps 1-5 (RAG)"]
+    Start6(["Begin Step 5"]) --> T6_1["6.1  Compile all DD flags<br/>from Steps 1-4 (RAG)"]
     T6_1 --> T6_2[/"6.2  Summarize legal<br/>DD findings"/]
     T6_2 --> T6_3[/"6.3  Summarize tax<br/>DD findings"/]
     T6_3 --> T6_4[/"6.4  Summarize insurance<br/>& safety DD findings"/]
@@ -324,7 +283,7 @@ flowchart LR
     Dec6 -->|No| T6_12["6.12  Build sensitivity<br/>analysis (-5%, -10%)"]
     T6_12 --> T6_13["6.13  Build third-party DD<br/>reports summary matrix"]
     T6_13 --> T6_14[/"6.14  Draft DD Summary &<br/>Key Risks section (4-6 pp)"/]
-    T6_14 --> End6(["Step 6 Complete"])
+    T6_14 --> End6(["Step 5 Complete"])
     style Start6 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End6 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T6_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -346,12 +305,12 @@ flowchart LR
     style Stop6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 7 -->
-<div class="ph" id="s7">
-<div class="phh">Step 7: Deal Structure &amp; Terms<span>16 Tasks | 10G &bull; 4Y &bull; 2R</span></div>
+<!-- STEP 6 (was Step 7) -->
+<div class="ph" id="s6">
+<div class="phh">Step 6: Deal Structure &amp; Terms<span>16 Tasks | 10G &bull; 4Y &bull; 2R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start7(["Begin Step 7"]) --> T7_1["7.1  Compute fully diluted<br/>share count & cap table"]
+    Start7(["Begin Step 6"]) --> T7_1["7.1  Compute fully diluted<br/>share count & cap table"]
     T7_1 --> T7_2["7.2  Build pro forma post-close<br/>cap table & ownership"]
     T7_2 --> T7_3["7.3  Shareholder base<br/>& cost basis analysis"]
     T7_3 --> T7_4["7.4  Build change-of-control<br/>matrix"]
@@ -363,14 +322,14 @@ flowchart LR
     T7_9 --> T7_10["7.10  280G golden<br/>parachute analysis"]
     T7_10 --> T7_11["7.11  HSR / antitrust<br/>assessment"]
     T7_11 --> Dec7{"HSR / regulatory<br/>clearance feasible?"}
-    Dec7 -->|No| Act7["Restart Step 7"]
+    Dec7 -->|No| Act7["Restart Step 6"]
     Act7 -.-> T7_1
     Dec7 -->|Yes| T7_12["7.12  Section 382 NOL<br/>limitation analysis"]
     T7_12 --> T7_13["7.13  RWI (rep & warranty<br/>insurance) assessment"]
     T7_13 --> T7_14["7.14  Design management<br/>incentive plan (MIP)"]
     T7_14 --> T7_15["7.15  Outline governance<br/>framework (Board, rights)"]
     T7_15 --> T7_16[/"7.16  Draft Deal Terms &<br/>Structure section (3-5 pp)"/]
-    T7_16 --> End7(["Step 7 Complete"])
+    T7_16 --> End7(["Step 6 Complete"])
     style Start7 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End7 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T7_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -393,12 +352,12 @@ flowchart LR
     style Act7 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 8 -->
-<div class="ph" id="s8">
-<div class="phh">Step 8: Value Creation Planning<span>12 Tasks | 8G &bull; 3Y &bull; 1R</span></div>
+<!-- STEP 7 (was Step 8) -->
+<div class="ph" id="s7">
+<div class="phh">Step 7: Value Creation Planning<span>12 Tasks | 8G &bull; 3Y &bull; 1R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start8(["Begin Step 8"]) --> T8_1["8.1  Categorize & quantify<br/>organic growth initiatives"]
+    Start8(["Begin Step 7"]) --> T8_1["8.1  Categorize & quantify<br/>organic growth initiatives"]
     T8_1 --> T8_2["8.2  Quantify margin<br/>expansion opportunities"]
     T8_2 --> T8_3["8.3  Build M&A strategy<br/>& pipeline valuation"]
     T8_3 --> T8_4["8.4  Estimate synergy<br/>realization costs & timing"]
@@ -408,12 +367,12 @@ flowchart LR
     T8_7 --> T8_8["8.8  IT systems integration<br/>assessment & roadmap"]
     T8_8 --> T8_9["8.9  Build value creation<br/>waterfall (entry to exit)"]
     T8_9 --> Dec8{"Value creation plan<br/>achieves target IRR?"}
-    Dec8 -->|No| Act8["Restart Step 8"]
+    Dec8 -->|No| Act8["Restart Step 7"]
     Act8 -.-> T8_1
     Dec8 -->|Yes| T8_10["8.10  Model technology<br/>investment & ROI"]
     T8_10 --> T8_11["8.11  Assess ESG &<br/>sustainability considerations"]
     T8_11 --> T8_12[/"8.12  Draft Value Creation<br/>Plan section (3-5 pp)"/]
-    T8_12 --> End8(["Step 8 Complete"])
+    T8_12 --> End8(["Step 7 Complete"])
     style Start8 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End8 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T8_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -432,12 +391,12 @@ flowchart LR
     style Act8 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 9 -->
-<div class="ph" id="s9">
-<div class="phh">Step 9: Valuation &amp; Returns Analysis<span>14 Tasks | 10G &bull; 4Y &bull; 0R</span></div>
+<!-- STEP 8 (was Step 9) -->
+<div class="ph" id="s8">
+<div class="phh">Step 8: Valuation &amp; Returns Analysis<span>14 Tasks | 10G &bull; 4Y &bull; 0R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start9(["Begin Step 9"]) --> T9_1["9.1  Screen & select<br/>comparable public cos (5-10)"]
+    Start9(["Begin Step 8"]) --> T9_1["9.1  Screen & select<br/>comparable public cos (5-10)"]
     T9_1 --> T9_2["9.2  Build comparable<br/>companies trading analysis"]
     T9_2 --> T9_3["9.3  Screen & select<br/>precedent transactions (5-10)"]
     T9_3 --> T9_4["9.4  Build precedent<br/>transactions analysis"]
@@ -447,14 +406,14 @@ flowchart LR
     T9_7 --> T9_8["9.8  Build debt paydown<br/>& leverage profile (5-yr)"]
     T9_8 --> T9_9["9.9  Valuation triangulation<br/>& football field chart"]
     T9_9 --> Dec9{"Valuation supports<br/>entry multiple?"}
-    Dec9 -->|No| Act9["Restart Step 9"]
+    Dec9 -->|No| Act9["Restart Step 8"]
     Act9 -.-> T9_1
     Dec9 -->|Yes| T9_10["9.10  Premium analysis<br/>(vs unaffected / book)"]
     T9_10 --> T9_11["9.11  Build sensitivity tables<br/>(entry x exit multiple)"]
     T9_11 --> T9_12["9.12  Finalize Sources & Uses<br/>and pro forma BS"]
     T9_12 --> T9_13["9.13  Build exit analysis<br/>(timing, buyers, routes)"]
     T9_13 --> T9_14[/"9.14  Draft Valuation &<br/>Returns section (4-6 pp)"/]
-    T9_14 --> End9(["Step 9 Complete"])
+    T9_14 --> End9(["Step 8 Complete"])
     style Start9 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End9 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T9_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -475,12 +434,12 @@ flowchart LR
     style Act9 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<!-- STEP 10 -->
-<div class="ph" id="s10">
-<div class="phh">Step 10: IC Memo Assembly &amp; Review<span>10 Tasks | 8G &bull; 0Y &bull; 2R</span></div>
+<!-- STEP 9 (was Step 10) -->
+<div class="ph" id="s9">
+<div class="phh">Step 9: IC Memo Assembly &amp; Review<span>10 Tasks | 8G &bull; 0Y &bull; 2R</span></div>
 <div class="phb"><pre class="mermaid">
 flowchart LR
-    Start10(["Begin Step 10"]) --> T10_1[/"10.1  Draft IC recommendation<br/>(Proceed / Conditions / DNP)"/]
+    Start10(["Begin Step 9"]) --> T10_1[/"10.1  Draft IC recommendation<br/>(Proceed / Conditions / DNP)"/]
     T10_1 --> T10_2[/"10.2  Draft requested approvals<br/>& authorization language"/]
     T10_2 --> T10_3["10.3  Build transaction milestones<br/>& critical path timeline"]
     T10_3 --> T10_4[/"10.4  Write Executive Summary<br/>(standalone 1-2 pp)"/]
@@ -493,7 +452,7 @@ flowchart LR
     Dec10 -->|No| Act10["Issue DNP<br/>& kill deal"]
     Act10 --> Stop10(["STOP"])
     Dec10 -->|Yes| T10_10[/"10.10  Prepare IC presentation<br/>materials & talking points"/]
-    T10_10 --> End10(["Step 10 Complete"])
+    T10_10 --> End10(["Step 9 Complete"])
     style Start10 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style End10 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     style T10_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
@@ -511,16 +470,15 @@ flowchart LR
     style Stop10 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
 </pre></div></div>
 
-<script type="module">
-import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-mermaid.initialize({ startOnLoad:true, theme:"base", themeVariables:{fontFamily:"Segoe UI,Arial,sans-serif",fontSize:"13px"}, flowchart:{useMaxWidth:true,htmlLabels:true,curve:"basis",padding:15} });
-</script>
-
 <div class="modal-overlay" id="zoomModal">
 <button class="modal-close" id="modalClose">&times;</button>
 <div class="modal-content" id="modalContent"></div>
 </div>
 
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+mermaid.initialize({ startOnLoad:true, theme:"base", themeVariables:{fontFamily:"Segoe UI,Arial,sans-serif",fontSize:"13px"}, flowchart:{useMaxWidth:true,htmlLabels:true,curve:"basis",padding:15} });
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
@@ -546,7 +504,6 @@ document.addEventListener("DOMContentLoaded", function() {
       phb.appendChild(btn);
     });
   }, 2000);
-
   document.getElementById("zoomModal").addEventListener("click", function(e) {
     if (e.target === this || e.target.id === "modalClose") {
       this.classList.remove("active");

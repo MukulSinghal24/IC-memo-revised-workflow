@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>IC Memo Workflow - Mermaid Flowcharts</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", Arial, sans-serif; background: #F5F5F5; color: #263238; }
+.hdr { background: #1A237E; color: white; padding: 30px 40px; }
+.hdr h1 { font-size: 26px; letter-spacing: 2px; margin-bottom: 4px; }
+.hdr p { font-size: 13px; color: #90CAF9; }
+.leg { display:flex; gap:20px; padding:14px 40px; background:white; border-bottom:1px solid #E0E0E0; flex-wrap:wrap; }
+.li { display:flex; align-items:center; gap:5px; font-size:12px; }
+.sw { width:16px; height:16px; border-radius:3px; border:1.5px solid; }
+.sg { background:#C8E6C9; border-color:#388E3C; }
+.sy { background:#FFF9C4; border-color:#F9A825; }
+.sr { background:#FFCDD2; border-color:#C62828; }
+.sd { background:#FFF9C4; border-color:#F9A825; transform:rotate(45deg); width:12px; height:12px; }
+.ss { background:#E3F2FD; border-color:#1565C0; border-radius:50%; }
+.sp { background:#E8EAF6; border-color:#3949AB; transform:skewX(-12deg); }
+.ph { margin:20px 30px; background:white; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); overflow:hidden; }
+.phh { background:#283593; color:white; padding:12px 20px; font-size:17px; font-weight:600; }
+.phh span { color:#90CAF9; font-weight:400; font-size:13px; margin-left:8px; }
+.phb { padding:20px; overflow-x:auto; }
+.phm { padding:6px 20px; background:#FAFAFA; border-top:1px solid #EEE; font-size:11px; color:#78909C; }
+.toc { padding:16px 40px; background:white; margin:16px 30px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+.toc h2 { font-size:16px; margin-bottom:10px; color:#1A237E; }
+.toc a { display:block; padding:3px 0; color:#283593; text-decoration:none; font-size:13px; }
+.toc a:hover { text-decoration:underline; }
+</style></head><body>
+<div class="hdr"><h1>IC MEMO BUILD WORKFLOW</h1>
+<p>Project Gate &mdash; Gate Doors &amp; Equipment Industries | $320M EV | 10 Phases | 126 Steps</p></div>
+<div class="leg">
+<div class="li"><div class="sw sg"></div> Green (No Blocker)</div>
+<div class="li"><div class="sw sy"></div> Yellow (Soft Blocker)</div>
+<div class="li"><div class="sw sr"></div> Red (Hard Blocker)</div>
+<div class="li"><div class="sw sd"></div> Decision (Yes/No)</div>
+<div class="li"><div class="sw ss"></div> Start / End</div>
+<div class="li"><div class="sw sp"></div> Input / Output (Parallelogram)</div>
+</div>
+<div class="toc"><h2>Table of Contents</h2>
+<a href="#p1">Phase 1: CIM Screening & Deal Parameters (12 steps | 8 I/O | 11G/1Y/0R)</a>
+<a href="#p2">Phase 2: Company & Operations Deep Dive (14 steps | 7 I/O | 12G/1Y/1R)</a>
+<a href="#p3">Phase 3: Industry & Market Analysis (10 steps | 1 I/O | 9G/1Y/0R)</a>
+<a href="#p4">Phase 4: Financial Analysis & QoE (16 steps | 8 I/O | 15G/1Y/0R)</a>
+<a href="#p5">Phase 5: Investment Thesis Development (8 steps | 3 I/O | 2G/1Y/5R)</a>
+<a href="#p6">Phase 6: Due Diligence Synthesis (14 steps | 11 I/O | 12G/1Y/1R)</a>
+<a href="#p7">Phase 7: Deal Structure & Terms (16 steps | 9 I/O | 10G/1Y/5R)</a>
+<a href="#p8">Phase 8: Value Creation Planning (12 steps | 3 I/O | 8G/3Y/1R)</a>
+<a href="#p9">Phase 9: Valuation & Returns Analysis (14 steps | 10 I/O | 13G/1Y/0R)</a>
+<a href="#p10">Phase 10: IC Memo Assembly & Review (10 steps | 7 I/O | 8G/0Y/2R)</a>
+</div>
+<div class="ph" id="p1">
+<div class="phh">Phase 1: CIM Screening & Deal Parameters<span>12 Steps | 8 I/O | 11G &bull; 1Y &bull; 0R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start1(["Begin Phase 1"])
+    Start1 --> T1_1[/"1.1  Parse CIM for company profile & deal parameters"/]
+    T1_1 --> T1_2[/"1.2  Extract CIM financial summary & claims"/]
+    T1_2 --> T1_3["1.3  Review Management Presentation & compare to CIM"]
+    T1_3 --> T1_4[/"1.4  Extract management forward projections & assumptions"/]
+    T1_4 --> T1_5["1.5  Map corporate & legal entity structure"]
+    T1_5 --> T1_6[/"1.6  Parse process letter & map auction dynamics"/]
+    T1_6 --> T1_7["1.7  Cross-reference KPIs against CIM claims"]
+    T1_7 --> Dec1{"CIM data consistent<br/>across sources?"}
+    Dec1 -->|No| Action1["Revise & return<br/>to Step 1.6"]
+    Action1 -.->|Loop back| T1_6
+    Dec1 -->|Yes| T1_8["1.8  Benchmark KPIs against industry standards"]
+    T1_8 --> T1_9[/"1.9  Review NDA terms & corporate formation docs"/]
+    T1_9 --> T1_10[/"1.10  Review sell-side advisor & fairness opinion scope"/]
+    T1_10 --> T1_11[/"1.11  Draft Sec 1.1 Investment Recommendation paragraph"/]
+    T1_11 --> T1_12[/"1.12  Populate Sec 1.2 Transaction Summary & Sec 1.3 Highlights"/]
+    T1_12 --> End1(["Phase 1 Complete"])
+    style Start1 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End1 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T1_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T1_12 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style Dec1 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T1_11 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style Action1 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: CIM data consistent across sources? | Blocker: YELLOW</div>
+</div>
+<div class="ph" id="p2">
+<div class="phh">Phase 2: Company & Operations Deep Dive<span>14 Steps | 7 I/O | 12G &bull; 1Y &bull; 1R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start2(["Begin Phase 2"])
+    Start2 --> T2_1[/"2.1  Build product/service line matrix with unit economics"/]
+    T2_1 --> T2_2["2.2  Analyze customer segmentation & concentration"]
+    T2_2 --> T2_3[/"2.3  Map customer contract structure & renewal profile"/]
+    T2_3 --> T2_4["2.4  Analyze recurring vs. non-recurring revenue mix"]
+    T2_4 --> T2_5["2.5  Analyze facilities, capacity & unit economics"]
+    T2_5 --> T2_6[/"2.6  Map supply chain & key vendor dependencies"/]
+    T2_6 --> T2_7["2.7  Map distribution network & channel mix"]
+    T2_7 --> T2_8[/"2.8  Review real estate footprint & lease obligations"/]
+    T2_8 --> T2_9["2.9  Analyze workforce composition & labor dynamics"]
+    T2_9 --> T2_10[/"2.10  Review management team backgrounds & capabilities"/]
+    T2_10 --> T2_11["2.11  Assess management rollover commitment & alignment"]
+    T2_11 --> Dec2{"Management rollover &<br/>alignment acceptable?"}
+    Dec2 -->|No| Action2["Revise & return<br/>to Step 2.10"]
+    Action2 -.->|Loop back| T2_10
+    Dec2 -->|Yes| T2_12[/"2.12  Review technology stack & IP position"/]
+    T2_12 --> T2_13["2.13  Quality control & regulatory compliance review"]
+    T2_13 --> T2_14[/"2.14  Draft Company Overview section (4-6 pages)"/]
+    T2_14 --> End2(["Phase 2 Complete"])
+    style Start2 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End2 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T2_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_12 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_14 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T2_13 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T2_11 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Dec2 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Action2 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: Management rollover & alignment acceptable? | Blocker: RED</div>
+</div>
+<div class="ph" id="p3">
+<div class="phh">Phase 3: Industry & Market Analysis<span>10 Steps | 1 I/O | 9G &bull; 1Y &bull; 0R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start3(["Begin Phase 3"])
+    Start3 --> T3_1["3.1  Size total addressable market (TAM/SAM/SOM)"]
+    T3_1 --> T3_2["3.2  Analyze market growth drivers & secular tailwinds"]
+    T3_2 --> T3_3["3.3  Map market segmentation & target segment dynamics"]
+    T3_3 --> T3_4["3.4  Analyze competitive landscape (5-10 competitors)"]
+    T3_4 --> T3_5["3.5  Assess industry fragmentation & consolidation opportunity"]
+    T3_5 --> T3_6["3.6  Analyze barriers to entry & competitive moats"]
+    T3_6 --> Dec3{"Competitive moat<br/>sufficient for thesis?"}
+    Dec3 -->|No| Action3["Revise & return<br/>to Step 3.4"]
+    Action3 -.->|Loop back| T3_4
+    Dec3 -->|Yes| T3_7["3.7  Assess regulatory environment & compliance landscape"]
+    T3_7 --> T3_8["3.8  Consumer/end-market trend analysis"]
+    T3_8 --> T3_9["3.9  Benchmark target vs. peers on key metrics"]
+    T3_9 --> T3_10[/"3.10  Draft Industry & Market Overview section (3-5 pages)"/]
+    T3_10 --> End3(["Phase 3 Complete"])
+    style Start3 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End3 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T3_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T3_6 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style Dec3 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style Action3 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: Competitive moat sufficient for thesis? | Blocker: YELLOW</div>
+</div>
+<div class="ph" id="p4">
+<div class="phh">Phase 4: Financial Analysis & QoE<span>16 Steps | 8 I/O | 15G &bull; 1Y &bull; 0R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start4(["Begin Phase 4"])
+    Start4 --> T4_1[/"4.1  Compile historical IS, BS, CFS (3-5 yrs + LTM)"/]
+    T4_1 --> T4_2[/"4.2  Construct LTM financial statements"/]
+    T4_2 --> T4_3[/"4.3  Analyze QoE report & reconcile adjusted EBITDA"/]
+    T4_3 --> T4_4[/"4.4  Build revenue bridge (volume, price, mix, M&A)"/]
+    T4_4 --> T4_5["4.5  Analyze customer concentration & revenue durability"]
+    T4_5 --> T4_6[/"4.6  Build EBITDA bridge (FY to LTM)"/]
+    T4_6 --> T4_7["4.7  Analyze gross margin trends by segment/product"]
+    T4_7 --> T4_8["4.8  Analyze SG&A and operating expense composition"]
+    T4_8 --> T4_9["4.9  Working capital analysis (NWC normalization)"]
+    T4_9 --> T4_10["4.10  Analyze existing debt structure & covenant compliance"]
+    T4_10 --> T4_11["4.11  Capex analysis (maintenance vs. growth split)"]
+    T4_11 --> T4_12["4.12  Cash flow analysis & free cash flow conversion"]
+    T4_12 --> T4_13[/"4.13  Budget vs. actual variance analysis (2-3 years)"/]
+    T4_13 --> T4_14[/"4.14  Review accounting policies & revenue recognition"/]
+    T4_14 --> T4_15["4.15  Validate financial model inputs & structure"]
+    T4_15 --> Dec4{"Financial model<br/>reconciles to QoE?"}
+    Dec4 -->|No| Action4["Revise & return<br/>to Step 4.12"]
+    Action4 -.->|Loop back| T4_12
+    Dec4 -->|Yes| T4_16[/"4.16  Draft Financial Overview section (5-8 pages)"/]
+    T4_16 --> End4(["Phase 4 Complete"])
+    style Start4 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End4 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T4_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_11 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_12 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_13 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_15 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_16 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T4_14 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style Dec4 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style Action4 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: Financial model reconciles to QoE? | Blocker: YELLOW</div>
+</div>
+<div class="ph" id="p5">
+<div class="phh">Phase 5: Investment Thesis Development<span>8 Steps | 3 I/O | 2G &bull; 1Y &bull; 5R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start5(["Begin Phase 5"])
+    Start5 --> T5_1["5.1  Distill top 3-5 investment highlights"]
+    T5_1 --> T5_2["5.2  Define value creation thesis with quantification"]
+    T5_2 --> T5_3[/"5.3  Build base case operating model (5-year projections)"/]
+    T5_3 --> T5_4[/"5.4  Build upside & downside scenarios (quantified)"/]
+    T5_4 --> T5_5["5.5  Identify differentiated insights (non-consensus views)"]
+    T5_5 --> T5_6["5.6  Assess management quality & incentive alignment"]
+    T5_6 --> T5_7["5.7  Define key assumptions & kill criteria"]
+    T5_7 --> Dec5{"Kill criteria<br/>triggered?"}
+    Dec5 -->|Yes| Action5["Issue DNP memo<br/>& exit process"]
+    Action5 --> Stop5(["STOP"])
+    Dec5 -->|No| T5_8[/"5.8  Draft Investment Thesis section (2-3 pages)"/]
+    T5_8 --> End5(["Phase 5 Complete"])
+    style Start5 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End5 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T5_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T5_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T5_8 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T5_1 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T5_2 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T5_5 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T5_6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T5_7 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Dec5 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Action5 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Stop5 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: Kill criteria triggered? | Blocker: RED</div>
+</div>
+<div class="ph" id="p6">
+<div class="phh">Phase 6: Due Diligence Synthesis<span>14 Steps | 11 I/O | 12G &bull; 1Y &bull; 1R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start6(["Begin Phase 6"])
+    Start6 --> T6_1[/"6.1  Compile all DD flags from Steps 1-5 (RAG status)"/]
+    T6_1 --> T6_2[/"6.2  Summarize legal DD findings"/]
+    T6_2 --> T6_3[/"6.3  Summarize tax DD findings"/]
+    T6_3 --> T6_4[/"6.4  Summarize insurance & safety DD findings"/]
+    T6_4 --> T6_5[/"6.5  Summarize environmental DD findings"/]
+    T6_5 --> T6_6[/"6.6  Summarize IT & cybersecurity DD findings"/]
+    T6_6 --> T6_7[/"6.7  Summarize commercial DD findings (if retained)"/]
+    T6_7 --> T6_8["6.8  Assess customer & revenue durability risks"]
+    T6_8 --> T6_9["6.9  Assess deal-specific risks (antitrust, CoC, consents)"]
+    T6_9 --> T6_10["6.10  Assess operational & execution risks"]
+    T6_10 --> T6_11[/"6.11  Build Risk Factor Matrix (15-20 risks with mitigants)"/]
+    T6_11 --> Dec6{"Any unmitigated<br/>red-flag risks?"}
+    Dec6 -->|Yes| Action6["Escalate to Partner<br/>for Go/No-Go"]
+    Action6 --> Stop6(["STOP"])
+    Dec6 -->|No| T6_12[/"6.12  Build sensitivity analysis (-5%, -10% scenarios)"/]
+    T6_12 --> T6_13[/"6.13  Build third-party DD reports summary matrix"/]
+    T6_13 --> T6_14[/"6.14  Draft DD Summary & Key Risks section (4-6 pages)"/]
+    T6_14 --> End6(["Phase 6 Complete"])
+    style Start6 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End6 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T6_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_11 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_12 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_13 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_14 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T6_10 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T6_9 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Dec6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Action6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Stop6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: Any unmitigated red-flag risks? | Blocker: RED</div>
+</div>
+<div class="ph" id="p7">
+<div class="phh">Phase 7: Deal Structure & Terms<span>16 Steps | 9 I/O | 10G &bull; 1Y &bull; 5R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start7(["Begin Phase 7"])
+    Start7 --> T7_1[/"7.1  Compute fully diluted share count & cap table"/]
+    T7_1 --> T7_2[/"7.2  Build pro forma post-close cap table & ownership"/]
+    T7_2 --> T7_3["7.3  Shareholder base & cost basis analysis"]
+    T7_3 --> T7_4[/"7.4  Build change-of-control matrix"/]
+    T7_4 --> T7_5[/"7.5  Build consent & regulatory approval tracker"/]
+    T7_5 --> T7_6[/"7.6  Analyze board authorization & deal process"/]
+    T7_6 --> T7_7[/"7.7  Review shareholder agreements & drag-along/tag-along"/]
+    T7_7 --> T7_8[/"7.8  Build Sources & Uses table"/]
+    T7_8 --> T7_9[/"7.9  Analyze debt financing terms & covenant structure"/]
+    T7_9 --> T7_10["7.10  280G golden parachute analysis"]
+    T7_10 --> T7_11["7.11  HSR/antitrust assessment"]
+    T7_11 --> Dec7{"HSR / regulatory<br/>clearance feasible?"}
+    Dec7 -->|No| Action7["Restructure deal<br/>or abandon"]
+    Action7 -.->|Loop back| T7_9
+    Dec7 -->|Yes| T7_12["7.12  Section 382 NOL limitation analysis"]
+    T7_12 --> T7_13["7.13  RWI (rep & warranty insurance) assessment"]
+    T7_13 --> T7_14["7.14  Design management incentive plan (MIP)"]
+    T7_14 --> T7_15["7.15  Outline governance framework (Board, rights)"]
+    T7_15 --> T7_16[/"7.16  Draft Deal Terms & Structure section (3-5 pages)"/]
+    T7_16 --> End7(["Phase 7 Complete"])
+    style Start7 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End7 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T7_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_15 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_16 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T7_12 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T7_6 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T7_7 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T7_11 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Dec7 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Action7 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T7_13 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T7_14 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: HSR / regulatory clearance feasible? | Blocker: RED</div>
+</div>
+<div class="ph" id="p8">
+<div class="phh">Phase 8: Value Creation Planning<span>12 Steps | 3 I/O | 8G &bull; 3Y &bull; 1R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start8(["Begin Phase 8"])
+    Start8 --> T8_1["8.1  Categorize & quantify organic growth initiatives"]
+    T8_1 --> T8_2["8.2  Quantify margin expansion opportunities"]
+    T8_2 --> T8_3["8.3  Build M&A strategy & pipeline valuation"]
+    T8_3 --> T8_4["8.4  Estimate synergy realization costs & timing"]
+    T8_4 --> T8_5[/"8.5  Review prior acquisition integration performance"/]
+    T8_5 --> T8_6["8.6  Build Day 1 / 30-60-90 / Year 1 integration plan"]
+    T8_6 --> T8_7["8.7  People & organizational integration assessment"]
+    T8_7 --> T8_8["8.8  IT systems integration assessment & roadmap"]
+    T8_8 --> T8_9[/"8.9  Build value creation waterfall (entry to exit)"/]
+    T8_9 --> Dec8{"Value creation plan<br/>achieves target IRR?"}
+    Dec8 -->|No| Action8["Revise & return<br/>to Step 8.7"]
+    Action8 -.->|Loop back| T8_7
+    Dec8 -->|Yes| T8_10["8.10  Model technology investment requirements & ROI"]
+    T8_10 --> T8_11["8.11  Assess ESG & sustainability considerations"]
+    T8_11 --> T8_12[/"8.12  Draft Value Creation Plan section (3-5 pages)"/]
+    T8_12 --> End8(["Phase 8 Complete"])
+    style Start8 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End8 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T8_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_11 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_12 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T8_3 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T8_4 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T8_8 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style Dec8 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T8_7 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Action8 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: Value creation plan achieves target IRR? | Blocker: YELLOW</div>
+</div>
+<div class="ph" id="p9">
+<div class="phh">Phase 9: Valuation & Returns Analysis<span>14 Steps | 10 I/O | 13G &bull; 1Y &bull; 0R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start9(["Begin Phase 9"])
+    Start9 --> T9_1["9.1  Screen & select comparable public companies (5-10)"]
+    T9_1 --> T9_2[/"9.2  Build comparable companies trading analysis"/]
+    T9_2 --> T9_3["9.3  Screen & select precedent transactions (5-10)"]
+    T9_3 --> T9_4[/"9.4  Build precedent transactions analysis"/]
+    T9_4 --> T9_5[/"9.5  Build DCF model (WACC, FCF, terminal value)"/]
+    T9_5 --> T9_6[/"9.6  Build LBO returns model (base/upside/downside)"/]
+    T9_6 --> T9_7[/"9.7  Build returns attribution analysis"/]
+    T9_7 --> T9_8[/"9.8  Build debt paydown & leverage profile (5-year)"/]
+    T9_8 --> T9_9[/"9.9  Valuation triangulation & football field chart"/]
+    T9_9 --> Dec9{"Valuation supports<br/>entry multiple?"}
+    Dec9 -->|No| Action9["Revise & return<br/>to Step 9.7"]
+    Action9 -.->|Loop back| T9_7
+    Dec9 -->|Yes| T9_10["9.10  Premium analysis (vs. unaffected / book value)"]
+    T9_10 --> T9_11[/"9.11  Build sensitivity tables (entry x exit multiple)"/]
+    T9_11 --> T9_12[/"9.12  Finalize Sources & Uses and pro forma balance sheet"/]
+    T9_12 --> T9_13["9.13  Build exit analysis (timing, buyer universe, routes)"]
+    T9_13 --> T9_14[/"9.14  Draft Valuation & Returns section (4-6 pages)"/]
+    T9_14 --> End9(["Phase 9 Complete"])
+    style Start9 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End9 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T9_1 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_9 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_11 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_12 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T9_14 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style Dec9 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style T9_13 fill:#FFF9C4,stroke:#F9A825,color:#5D4037
+    style Action9 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: Valuation supports entry multiple? | Blocker: YELLOW</div>
+</div>
+<div class="ph" id="p10">
+<div class="phh">Phase 10: IC Memo Assembly & Review<span>10 Steps | 7 I/O | 8G &bull; 0Y &bull; 2R</span></div>
+<div class="phb"><pre class="mermaid">
+flowchart TB
+    Start10(["Begin Phase 10"])
+    Start10 --> T10_1[/"10.1  Draft IC recommendation (Proceed / Conditions / DNP)"/]
+    T10_1 --> T10_2[/"10.2  Draft requested approvals & authorization language"/]
+    T10_2 --> T10_3[/"10.3  Build transaction milestones & critical path timeline"/]
+    T10_3 --> T10_4[/"10.4  Write Executive Summary (standalone 1-2 pages)"/]
+    T10_4 --> T10_5[/"10.5  Compile all appendices (A-O, numbered & indexed)"/]
+    T10_5 --> T10_6[/"10.6  Build table of contents with page references"/]
+    T10_6 --> T10_7["10.7  Full document review: number consistency check"]
+    T10_7 --> T10_8["10.8  Full document review: narrative consistency & traceability"]
+    T10_8 --> T10_9["10.9  Senior review cycle (VP to Principal to Partner)"]
+    T10_9 --> Dec10{"IC approves<br/>proceeding?"}
+    Dec10 -->|No| Action10["Address conditions<br/>or issue DNP"]
+    Action10 -.->|Loop back| T10_7
+    Dec10 -->|Yes| T10_10[/"10.10  Prepare IC presentation materials & talking points"/]
+    T10_10 --> End10(["Phase 10 Complete"])
+    style Start10 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style End10 fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    style T10_2 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_3 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_4 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_5 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_6 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_7 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_8 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_10 fill:#C8E6C9,stroke:#388E3C,color:#1B5E20
+    style T10_1 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style T10_9 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Dec10 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+    style Action10 fill:#FFCDD2,stroke:#C62828,color:#B71C1C
+</pre></div>
+<div class="phm">Decision: IC approves proceeding? | Blocker: RED</div>
+</div>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+mermaid.initialize({ startOnLoad:true, theme:"base", themeVariables:{fontFamily:"Segoe UI,Arial,sans-serif",fontSize:"13px"}, flowchart:{useMaxWidth:true,htmlLabels:true,curve:"basis",padding:12} });
+</script></body></html>
